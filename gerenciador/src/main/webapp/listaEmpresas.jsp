@@ -7,11 +7,8 @@
 <!DOCTYPE html>
 <html>
 <body>
-	<c:if test="${not empty lista}">
+	<c:if test="${not empty empresa}">
 		Empresa ${empresa} cadastrada com sucesso!
-	</c:if>
-	<c:if test="${empty lista}">
-		Nenhuma empresa foi cadastrada
 	</c:if>
 	<br /> Lista de empresas:
 	<br />
@@ -19,7 +16,7 @@
 		<c:forEach items="${lista}" var="empresa">
 			<li>
 				${empresa.nome} - <fmt:formatDate value="${empresa.dataAbertura}" pattern="dd/MM/yyyy" />
-				<a href="/gerenciador/removeEmpresa">Remover</a>
+				<a href="/gerenciador/removeEmpresa?id=${empresa.id}">Remover</a>
 			</li>
 		</c:forEach>
 	</ul>

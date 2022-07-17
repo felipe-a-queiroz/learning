@@ -15,7 +15,13 @@ public class RemoveEmpresaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		String paramId = request.getParameter("id");
+		Integer id = Integer.valueOf(paramId);
+		
+		Banco banco = new Banco();
+		banco.remover(id);
+		
+		response.sendRedirect("listaEmpresas");
 	}
 
 	
