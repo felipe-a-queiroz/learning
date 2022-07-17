@@ -1,8 +1,10 @@
-package br.com.alura.gerenciador.servlet;
+package br.com.alura.gerenciador.controle;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+
+import br.com.alura.gerenciador.modelo.Empresa;
 
 public class Banco {
 
